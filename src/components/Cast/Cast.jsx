@@ -1,9 +1,5 @@
 import React from 'react';
 
-const Cast = () => (
-  <div>
-    <h1>Hello, World!</h1>
-  </div>
-);
+const Cast = () => <div>Cast</div>;
 
 export default Cast;

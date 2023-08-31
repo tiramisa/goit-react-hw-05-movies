@@ -1,9 +1,5 @@
 import React from 'react';
 
-const MovieDetails = () => (
-  <div>
-    <h1>Hello, World!</h1>
-  </div>
-);
+const MovieDetails = () => <div>MovieDetails</div>;
 
 export default MovieDetails;

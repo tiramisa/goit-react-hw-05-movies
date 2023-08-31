@@ -1,9 +1,5 @@
 import React from 'react';
 
-const SharedLayout = () => (
-  <div>
-    <h1>Hello, World!</h1>
-  </div>
-);
+const SharedLayout = () => <div></div>;
 
 export default SharedLayout;

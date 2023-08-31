@@ -1,6 +1,5 @@
-import { lazy } from 'react';
+import { lazy, Suspense } from 'react';
 import React from 'react';
-import { BrowserRouter as Router } from 'react-router-dom';
 import { Routes, Route } from 'react-router-dom';
 import background from 'img/popcorn.jpeg';
 
@@ -14,19 +13,17 @@ const Movies = lazy(() => import('Pages/Movies/Movies'));
 export const App = () => {
   return (
     <div style={{ backgroundImage: `url(${background})` }}>
-      <Router>
-        <Routes>
-          <Route path="/" element={<SharedLayout />}>
-            <Route index element={<Home />} />
-            <Route path="/movies" element={<Movies />} />
-            <Route path="movies/:movieId" element={<MovieDetails />}>
-              <Route path="cast" element={<Cast />} />
-              <Route path="reviews" element={<Reviews />} />
-            </Route>
-            <Route path="*" element={<Home />} />
+      <Routes>
+        <Route path="/" element={<SharedLayout />}>
+          <Route index element={<Home />} />
+          <Route path="/movies" element={<Movies />} />
+          <Route path="movies/:movieId" element={<MovieDetails />}>
+            <Route path="cast" element={<Cast />} />
+            <Route path="reviews" element={<Reviews />} />
           </Route>
-        </Routes>
-      </Router>
+          <Route path="*" element={<Home />} />
+        </Route>
+      </Routes>
     </div>
   );
 };
