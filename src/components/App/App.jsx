@@ -1,29 +1,19 @@
-import { lazy } from 'react';
-import React from 'react';
 import { Routes, Route } from 'react-router-dom';
-import background from 'img/popcorn.jpeg';
+import Home from 'components/Pages/Home/Home';
+import Movies from 'components/Pages/Movies/Movies';
+import MovieDetails from 'components/Pages/MovieDetails/MovieDetails';
+import NotFound from 'components/Pages/NotFound/NotFound';
 
-const SharedLayout = lazy(() => import('components/SharedLayout/SharedLayout'));
-const Cast = lazy(() => import('components/Cast/Cast'));
-const Reviews = lazy(() => import('components/Reviews/Reviews'));
-const Home = lazy(() => import('Pages/Home/Home'));
-const MovieDetails = lazy(() => import('Pages/MovieDetails/MovieDetails'));
-const Movies = lazy(() => import('Pages/Movies/Movies'));
-const NotFound = lazy(() => import('Pages/NotFound/NotFound'));
+import background from 'img/popcorn.jpeg';
 
 export const App = () => {
   return (
     <div style={{ backgroundImage: `url(${background})` }}>
       <Routes>
-        <Route path="/" element={<SharedLayout />}>
-          <Route index element={<Home />} />
-          <Route path="/movies" element={<Movies />} />
-          <Route path="movies/:movieId" element={<MovieDetails />}>
-            <Route path="cast" element={<Cast />} />
-            <Route path="reviews" element={<Reviews />} />
-          </Route>
-          <Route path="*" element={<NotFound />} />
-        </Route>
+        <Route path="/" element={<Home />} />
+        <Route path="/movies" element={<Movies />} />
+        <Route path="/movies/:movieId" element={<MovieDetails />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </div>
   );
