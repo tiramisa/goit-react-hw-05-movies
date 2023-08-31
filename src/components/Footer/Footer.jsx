@@ -1,7 +1,11 @@
+import { Container } from '../App/App.styled';
+
 const Footer = () => {
   return (
     <footer>
-      <p>&copy; SoftCat</p>
+      <Container>
+        <p>&copy; SoftCat</p>
+      </Container>
     </footer>
   );
 };
