@@ -1,0 +1,1 @@
+{"version":3,"file":"static/js/567.586438b7.chunk.js","mappings":"iKAQA,UANe,kBACb,0BACE,2CAFW,C","sources":["Pages/Movies/Movies.jsx"],"sourcesContent":["import React from 'react';\n\nconst Movies = () => (\n  <div>\n    <h1>Hello, World!</h1>\n  </div>\n);\n\nexport default Movies;\n"],"names":[],"sourceRoot":""}
