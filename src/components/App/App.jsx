@@ -2,6 +2,7 @@ import { lazy } from 'react';
 import React from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { Routes, Route } from 'react-router-dom';
+import background from 'img/popcorn.jpeg';
 
 const SharedLayout = lazy(() => import('components/SharedLayout/SharedLayout'));
 const Cast = lazy(() => import('components/Cast/Cast'));
@@ -12,18 +13,20 @@ const Movies = lazy(() => import('Pages/Movies/Movies'));
 
 export const App = () => {
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<SharedLayout />}>
-          <Route index element={<Home />} />
-          <Route path="/movies" element={<Movies />} />
-          <Route path="movies/:movieId" element={<MovieDetails />}>
-            <Route path="cast" element={<Cast />} />
-            <Route path="reviews" element={<Reviews />} />
+    <div style={{ backgroundImage: `url(${background})` }}>
+      <Router>
+        <Routes>
+          <Route path="/" element={<SharedLayout />}>
+            <Route index element={<Home />} />
+            <Route path="/movies" element={<Movies />} />
+            <Route path="movies/:movieId" element={<MovieDetails />}>
+              <Route path="cast" element={<Cast />} />
+              <Route path="reviews" element={<Reviews />} />
+            </Route>
+            <Route path="*" element={<Home />} />
           </Route>
-          <Route path="*" element={<Home />} />
-        </Route>
-      </Routes>
-    </Router>
+        </Routes>
+      </Router>
+    </div>
   );
 };

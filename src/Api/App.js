@@ -1,8 +1,10 @@
-const apiKey = 'c20148b967662b7bc56a396dddd785bb';
-const movieId = 12345;
-const baseUrl = 'https://api.themoviedb.org/3';
+import axios from 'axios';
 
-const url = `${baseUrl}/movie/${movieId}?api_key=${apiKey}`;
+const apiKey = 'c20148b967662b7bc56a396dddd785bb';
+const movieId = 1;
+const url = `${axios.defaults.baseURL}movie/${movieId}?api_key=${apiKey}`;
+
+axios.defaults.baseURL = 'https://api.themoviedb.org/3/';
 
 fetch(url)
   .then(response => response.json())
