@@ -1,1 +1,0 @@
-{"version":3,"file":"static/js/10.eebe2c92.chunk.js","mappings":"+JAIA,UAFqB,kBAAM,yCAAN,C","sources":["Pages/MovieDetails/MovieDetails.jsx"],"sourcesContent":["import React from 'react';\n\nconst MovieDetails = () => <div>MovieDetails</div>;\n\nexport default MovieDetails;\n"],"names":[],"sourceRoot":""}

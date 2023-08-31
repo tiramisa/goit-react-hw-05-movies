@@ -1,1 +1,0 @@
-{"version":3,"file":"static/js/765.30b2ff52.chunk.js","mappings":"0JAQA,UAJA,WACE,OAAO,kBACR,C","sources":["Pages/Home/Home.jsx"],"sourcesContent":["// import React from 'react';\n// import { Link } from 'react-router-dom';\n// import styles from './StylesHome.module.css';\n\nfunction Home() {\n  return <div></div>;\n}\n\nexport default Home;\n"],"names":[],"sourceRoot":""}
