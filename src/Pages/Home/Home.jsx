@@ -1,26 +1,9 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
-import React from 'react';
-import styles from './StylesHome.module.css';
+// import React from 'react';
+// import { Link } from 'react-router-dom';
+// import styles from './StylesHome.module.css';
+
 function Home() {
-  return (
-    <Home>
-      <nav className={styles.decorHome}>
-        <div>
-          <a href="#" className={styles.brandLogo}>
-            Movies search
-          </a>
-          <ul>
-            <li>
-              <a href="#">Link one</a>
-            </li>
-            <li>
-              <a href="#">Link two</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-    </Home>
-  );
+  return <div></div>;
 }
 
 export default Home;
