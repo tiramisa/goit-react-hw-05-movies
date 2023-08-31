@@ -1,4 +1,4 @@
-import { lazy, Suspense } from 'react';
+import { lazy } from 'react';
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import background from 'img/popcorn.jpeg';
