@@ -1,1 +1,0 @@
-{"version":3,"file":"static/js/247.fe5697eb.chunk.js","mappings":"iKAQA,UANa,kBACX,0BACE,2CAFS,C","sources":["components/Cast/Cast.jsx"],"sourcesContent":["import React from 'react';\n\nconst Cast = () => (\n  <div>\n    <h1>Hello, World!</h1>\n  </div>\n);\n\nexport default Cast;\n"],"names":[],"sourceRoot":""}
