@@ -1,6 +1,7 @@
 import { Link, NavLink } from 'react-router-dom';
-import { FaBilibili } from 'react-icons/fa6';
 import { Container } from '../App/App.styled';
+import logo from 'img/logo.jpeg';
+import { HeaderTitle } from './HeaderTitle';
 
 const Header = () => {
   return (
@@ -8,8 +9,9 @@ const Header = () => {
       <Container>
         <Link to="/">
           <div>
-            <FaBilibili />
-            <h1>KinoCat</h1>
+            <NavLink to="/">
+              <HeaderTitle image={logo}></HeaderTitle>
+            </NavLink>
           </div>
         </Link>
         <nav>
