@@ -1,23 +1,30 @@
-import { Link, NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { Container } from '../App/App.styled';
 import logo from 'img/logo.jpeg';
-import { HeaderTitle } from './HeaderTitle';
+
+import { HeaderContainer } from './HeaderStyled';
+import { HeaderLogo } from './HeaderStyled';
+import { HeaderNav } from './HeaderStyled';
 
 const Header = () => {
   return (
     <header>
       <Container>
-        <Link to="/">
-          <div>
+        <HeaderContainer>
+          <NavLink to="/">
+            <div>
+              <HeaderLogo image={logo}></HeaderLogo>
+            </div>
+          </NavLink>
+          <nav>
             <NavLink to="/">
-              <HeaderTitle image={logo}></HeaderTitle>
+              <HeaderNav>Home</HeaderNav>
             </NavLink>
-          </div>
-        </Link>
-        <nav>
-          <NavLink to="/">Home</NavLink>
-          <NavLink to="/movies">Movies</NavLink>
-        </nav>
+            <NavLink to="/movies">
+              <HeaderNav>Movies</HeaderNav>
+            </NavLink>
+          </nav>
+        </HeaderContainer>
       </Container>
     </header>
   );
