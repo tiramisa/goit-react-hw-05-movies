@@ -21,7 +21,6 @@ const Home = () => {
       {!arrayOfMovies && <p>No results found</p>}
       {arrayOfMovies && <Title text="Top films" />}
       {arrayOfMovies && <MovieItem arrayOfMovies={arrayOfMovies} />}
-      <div></div>
     </>
   );
 };

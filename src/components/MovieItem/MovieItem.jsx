@@ -1,4 +1,5 @@
-import React from 'react';
+import { NavLink } from 'react-router-dom';
+
 // import PropTypes from 'prop-types';
 
 const MovieItem = ({ arrayOfMovies }) => {
@@ -15,7 +16,7 @@ const MovieItem = ({ arrayOfMovies }) => {
 
         return (
           <li key={movie.id}>
-            <p>{nameOfMovies}</p>
+            <NavLink to={`/movies/${movie.id}`}>{nameOfMovies}</NavLink>
           </li>
         );
       })}
