@@ -3,7 +3,6 @@ import { Ul, Li, ImgCard, Img } from './MovieItem.styled';
 // import PropTypes from 'prop-types';
 
 const MovieItem = ({ arrayOfMovies }) => {
-  console.log('arrayOfMovies', arrayOfMovies);
   return (
     <Ul>
       {arrayOfMovies.map(movie => {

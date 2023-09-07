@@ -7,7 +7,7 @@ export const Ul = styled.ul`
 `;
 
 export const Li = styled.li`
-  width: 226px;
+  width: 225px;
 `;
 
 export const Img = styled.img`

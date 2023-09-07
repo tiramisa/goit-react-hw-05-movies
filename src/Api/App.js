@@ -1,3 +1,4 @@
+const baseURL = 'https://api.themoviedb.org/3/';
 const options = {
   method: 'GET',
   headers: {
@@ -7,10 +8,12 @@ const options = {
   },
 };
 
-// const apiKey = 'c20148b967662b7bc56a396dddd785bb';
-const baseURL = 'https://api.themoviedb.org/3/';
-
 export function getPopularMoviesFromApi() {
   const URL = `${baseURL}trending/all/day?language=en-US`;
+  return fetch(URL, options).then(response => response.json());
+}
+
+export function getMovies(movie_id) {
+  const URL = `${baseURL}movie/${movie_id}`;
   return fetch(URL, options).then(response => response.json());
 }
