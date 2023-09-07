@@ -16,6 +16,9 @@ const MovieItem = ({ arrayOfMovies }) => {
 
         return (
           <li key={movie.id}>
+            <img
+              srcSet={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
+            />
             <NavLink to={`/movies/${movie.id}`}>{nameOfMovies}</NavLink>
           </li>
         );
