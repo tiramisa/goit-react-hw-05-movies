@@ -19,7 +19,10 @@ const MovieItem = ({ arrayOfMovies }) => {
             <img
               srcSet={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
             />
-            <NavLink to={`/movies/${movie.id}`}>{nameOfMovies}</NavLink>
+            <div>
+              {' '}
+              <NavLink to={`/movies/${movie.id}`}>{nameOfMovies}</NavLink>
+            </div>
           </li>
         );
       })}

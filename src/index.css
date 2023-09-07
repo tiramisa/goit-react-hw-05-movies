@@ -30,6 +30,18 @@ code {
   min-height: 100vh;
 }
 
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 30px;
+}
+
 main {
   flex: 1 1 auto;
+}
+
+img {
+  width: 200px;
+  height: 300px;
+  margin: 10px;
 }
