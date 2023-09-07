@@ -8,6 +8,8 @@ export const Container = styled.div`
   background-color: #333;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
   color: #aba8a9;
+  padding-left: 15px;
+  padding-right: 15px;
 
   a {
     margin-top: 20px;

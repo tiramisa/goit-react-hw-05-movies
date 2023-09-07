@@ -1,11 +1,11 @@
-import { NavLink } from 'react-router-dom';
-
+import { NavLink, Link } from 'react-router-dom';
+import { Ul, Li, ImgCard, Img } from './MovieItem.styled';
 // import PropTypes from 'prop-types';
 
 const MovieItem = ({ arrayOfMovies }) => {
   console.log('arrayOfMovies', arrayOfMovies);
   return (
-    <ul>
+    <Ul>
       {arrayOfMovies.map(movie => {
         let nameOfMovies = null;
         if (movie.title) {
@@ -15,18 +15,21 @@ const MovieItem = ({ arrayOfMovies }) => {
         }
 
         return (
-          <li key={movie.id}>
-            <img
-              srcSet={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
-            />
+          <Li key={movie.id}>
+            <Link to={`/movies/${movie.id}`}>
+              <ImgCard>
+                <Img
+                  srcSet={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
+                />
+              </ImgCard>
+            </Link>
             <div>
-              {' '}
               <NavLink to={`/movies/${movie.id}`}>{nameOfMovies}</NavLink>
             </div>
-          </li>
+          </Li>
         );
       })}
-    </ul>
+    </Ul>
   );
 };
 

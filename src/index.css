@@ -33,15 +33,15 @@ code {
 ul {
   list-style: none;
   padding: 0;
-  margin: 30px;
+  margin: 0;
 }
 
 main {
   flex: 1 1 auto;
 }
 
-img {
+/* img {
   width: 200px;
   height: 300px;
   margin: 10px;
-}
+} */
