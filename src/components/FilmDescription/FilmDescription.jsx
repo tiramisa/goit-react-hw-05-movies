@@ -21,6 +21,7 @@ const FilmDescription = ({ movieInfo }) => {
         <div>
           <img
             srcSet={`https://image.tmdb.org/t/p/w500${movieInfo.poster_path}`}
+            alt={`Poster for ${movieInfo.title}`}
           />
         </div>
         <div>
