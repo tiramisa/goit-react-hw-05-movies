@@ -17,3 +17,8 @@ export function getMovies(movie_id) {
   const URL = `${baseURL}movie/${movie_id}`;
   return fetch(URL, options).then(response => response.json());
 }
+
+export function getMoviesName(query) {
+  const URL = `${baseURL}search/movie?query=${query}&include_adult=false&language=en-US&page=1`;
+  return fetch(URL, options).then(response => response.json());
+}
