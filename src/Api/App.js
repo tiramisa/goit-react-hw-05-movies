@@ -9,7 +9,7 @@ const options = {
 };
 
 export function getPopularMoviesFromApi() {
-  const URL = `${baseURL}trending/all/day?language=en-US`;
+  const URL = `${baseURL}movie/popular`;
   return fetch(URL, options).then(response => response.json());
 }
 
