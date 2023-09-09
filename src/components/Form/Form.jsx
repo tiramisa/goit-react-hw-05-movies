@@ -1,8 +1,9 @@
-// import PropTypes from 'prop-types';
 import { FaSistrix } from 'react-icons/fa';
 import { useState } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
+import PropTypes from 'prop-types';
 import 'react-toastify/dist/ReactToastify.css';
+import styles from './Form.module.css';
 
 const Form = ({ onSubmit }) => {
   const [query, SetQuery] = useState('');
@@ -35,15 +36,9 @@ const Form = ({ onSubmit }) => {
         pauseOnHover
         theme="dark"
       />
-      <form className="form" onSubmit={onHandleSubmit}>
-        <button type="submit" className="button">
-          <span className="button-label">
-            <FaSistrix />
-          </span>
-        </button>
-
+      <form className={styles.form} onSubmit={onHandleSubmit}>
         <input
-          className="input"
+          className={styles.input}
           type="text"
           autoComplete="off"
           autoFocus
@@ -51,10 +46,15 @@ const Form = ({ onSubmit }) => {
           value={query}
           onChange={onHandleChange}
         />
+        <button type="submit" className={styles.button}>
+          <span className={styles.buttonLabel}>
+            <FaSistrix />
+          </span>
+        </button>
       </form>
     </>
   );
 };
 
-// Form.propTypes = {};
+Form.propTypes = { onSubmit: PropTypes.func.isRequired };
 export default Form;

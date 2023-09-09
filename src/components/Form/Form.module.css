@@ -1,0 +1,37 @@
+/* Form.module.css */
+
+.form {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.input {
+  flex: 1;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+}
+
+.button {
+  background-color: #ffa733;
+  color: #ffffff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  margin-left: 5px;
+  cursor: pointer;
+  transition: background-color 500ms ease, color 500ms ease;
+}
+
+.button:hover {
+  background-color: #ff763b;
+  color: #000000;
+}
+
+.buttonLabel svg {
+  width: 20px;
+  height: 20px;
+}
