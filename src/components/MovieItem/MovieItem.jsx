@@ -1,7 +1,7 @@
 import { NavLink, Link } from 'react-router-dom';
-import { Ul, Li, ImgCard, Img } from './MovieItem.styled';
+import { Ul, Li, ImgCard, Img } from './MovieItemStyled';
 import NoFotoImg from '../../img/four-hundred-four.jpeg';
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 
 const MovieItem = ({ arrayOfMovies }) => {
   return (
@@ -34,6 +34,8 @@ const MovieItem = ({ arrayOfMovies }) => {
   );
 };
 
-// MovieItem.propTypes = {};
+MovieItem.propTypes = {
+  arrayOfMovies: PropTypes.arrayOf(PropTypes.object).isRequired,
+};
 
 export default MovieItem;

@@ -1,4 +1,4 @@
-import { Container } from '../App/App.styled';
+import { Container } from '../App/AppStyled';
 import { FaInstagram, FaFacebook, FaTwitter } from 'react-icons/fa';
 
 import {

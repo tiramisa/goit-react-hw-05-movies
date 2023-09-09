@@ -1,5 +1,5 @@
 import { NavLink } from 'react-router-dom';
-import { Container } from '../App/App.styled';
+import { Container } from '../App/AppStyled';
 import { HeaderContainer, HeaderNav, HeaderLogo } from './HeaderStyled';
 
 import logo from 'img/logo.jpeg';
