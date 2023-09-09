@@ -6,7 +6,7 @@ import Form from 'components/Form/Form';
 import MovieItem from 'components/MovieItem/MovieItem';
 
 const Movies = () => {
-  const [searchQuery, setSearchQuery] = useState(null);
+  const [setSearchQuery] = useState(null);
   const [arrayOfMovies, setArrayOfMovies] = useState(null);
 
   const [searchParams, setSearchParams] = useSearchParams();
