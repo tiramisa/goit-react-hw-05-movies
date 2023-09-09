@@ -5,11 +5,19 @@ import Movies from 'components/Pages/Movies/Movies';
 import MovieDetails from 'components/Pages/MovieDetails/MovieDetails';
 import NotFound from 'components/Pages/NotFound/NotFound';
 import SharedLayout from 'components/SharedLayout/SharedLayout';
-import background from 'img/popcorn.jpeg';
+import background from 'img/kinocat.jpeg';
 
 export const App = () => {
   return (
-    <div style={{ backgroundImage: `url(${background})` }}>
+    <div
+      style={{
+        backgroundImage: `url(${background})`,
+        backgroundSize: 'cover',
+        backgroundRepeat: 'no-repeat',
+        backgroundPosition: 'center center',
+        height: '100%',
+      }}
+    >
       <Routes>
         <Route path="/" element={<SharedLayout />}>
           <Route index element={<Home />} />
