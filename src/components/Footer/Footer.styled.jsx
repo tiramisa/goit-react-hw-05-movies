@@ -42,6 +42,9 @@ export const FooterCopy = styled.p`
   align-items: center;
   font-size: 14px;
   padding: 10px;
+  font-family: 'Playfair Display', serif, 'Ubuntu Mono', monospace, 'Montserrat',
+    sans-serif;
+  font-weight: 400;
 `;
 export const FooterContent = styled.div`
   display: flex;
@@ -53,4 +56,9 @@ export const FooterContent = styled.div`
   padding: 20px;
   gap: 24px;
 `;
-export const FooterText = styled.p``;
+export const FooterText = styled.p`
+  font-size: 16px;
+  font-family: 'Playfair Display', serif, 'Ubuntu Mono', monospace, 'Montserrat',
+    sans-serif;
+  font-weight: 400;
+`;
