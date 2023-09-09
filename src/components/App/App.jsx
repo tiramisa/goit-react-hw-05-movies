@@ -15,7 +15,7 @@ export const App = () => {
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
         backgroundPosition: 'center center',
-        height: '100%',
+        height: '100hv',
       }}
     >
       <Routes>

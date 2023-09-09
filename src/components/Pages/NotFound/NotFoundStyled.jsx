@@ -22,6 +22,7 @@ export const LinkFound = styled.div`
   justify-content: center;
   padding: 20px;
   margin: 0;
+
   .animate__heartBeat {
     animation-duration: 4.5s;
     animation-iteration-count: infinite;
