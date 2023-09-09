@@ -11,13 +11,16 @@ export const HeaderLogo = styled.h1`
   background-image: url(${props => props.image});
   background-size: cover;
   background-repeat: no-repeat;
-  width: 80px;
-  height: 80px;
-  margin-left: 20px;
+  width: 180px;
+  height: 100px;
 `;
 
 export const HeaderNav = styled.nav`
   float: right;
   align-items: center;
-  gap: 80px;
+  padding: 20px;
+  font-family: 'Playfair Display', serif, 'Ubuntu Mono', monospace, 'Montserrat',
+    sans-serif;
+  font-weight: 600;
+  font-size: 18px;
 `;

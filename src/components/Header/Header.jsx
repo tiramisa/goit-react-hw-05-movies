@@ -1,10 +1,8 @@
 import { NavLink } from 'react-router-dom';
 import { Container } from '../App/App.styled';
-import logo from 'img/logo.jpeg';
+import { HeaderContainer, HeaderNav, HeaderLogo } from './HeaderStyled';
 
-import { HeaderContainer } from './HeaderStyled';
-import { HeaderLogo } from './HeaderStyled';
-import { HeaderNav } from './HeaderStyled';
+import logo from 'img/logo.jpeg';
 
 const Header = () => {
   return (
