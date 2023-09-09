@@ -9,7 +9,7 @@ import {
   FooterCopy,
   FooterContent,
   FooterText,
-} from './Footer.styled';
+} from './FooterStyled';
 
 const Footer = () => {
   const handleInstagramClick = () => {

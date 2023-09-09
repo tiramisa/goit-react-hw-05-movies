@@ -1,9 +1,9 @@
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 
 const Title = ({ text }) => {
   return <h1>{text}</h1>;
 };
 
-// Title.propTypes = {};
+Title.propTypes = { text: PropTypes.string.isRequired };
 
 export default Title;
