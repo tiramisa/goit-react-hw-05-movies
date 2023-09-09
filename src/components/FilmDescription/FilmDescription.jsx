@@ -1,4 +1,5 @@
 import React from 'react';
+import NoFotoImg from '../../img/four-hundred-four.jpeg';
 // import PropTypes from 'prop-types';
 
 const FilmDescription = ({ movieInfo }) => {
@@ -10,8 +11,15 @@ const FilmDescription = ({ movieInfo }) => {
   } else {
     nameOfMovies = movieInfo.name;
   }
+
   let userScore = movieInfo.vote_average * 10;
   let genres = movieInfo.genres.map(genre => genre.name).join(', ');
+
+  let posterPath = NoFotoImg;
+  if (movieInfo.poster_path) {
+    posterPath = `https://image.tmdb.org/t/p/w500${movieInfo.poster_path}`;
+  }
+
   return (
     <div>
       <div>
@@ -19,10 +27,7 @@ const FilmDescription = ({ movieInfo }) => {
       </div>
       <div>
         <div>
-          <img
-            srcSet={`https://image.tmdb.org/t/p/w500${movieInfo.poster_path}`}
-            alt={`Poster for ${movieInfo.title}`}
-          />
+          <img srcSet={posterPath} alt={`Poster for ${movieInfo.title}`} />
         </div>
         <div>
           <h1>{nameOfMovies}</h1>

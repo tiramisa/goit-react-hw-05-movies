@@ -35,7 +35,6 @@ const Form = ({ onSubmit }) => {
         pauseOnHover
         theme="dark"
       />
-      export default Form;
       <form className="form" onSubmit={onHandleSubmit}>
         <button type="submit" className="button">
           <span className="button-label">

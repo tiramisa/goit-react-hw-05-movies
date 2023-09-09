@@ -1,5 +1,6 @@
 import { NavLink, Link } from 'react-router-dom';
 import { Ul, Li, ImgCard, Img } from './MovieItem.styled';
+import NoFotoImg from '../../img/four-hundred-four.jpeg';
 // import PropTypes from 'prop-types';
 
 const MovieItem = ({ arrayOfMovies }) => {
@@ -12,14 +13,15 @@ const MovieItem = ({ arrayOfMovies }) => {
         } else {
           nameOfMovies = movie.name;
         }
-
+        let posterPath = NoFotoImg;
+        if (movie.poster_path) {
+          posterPath = `https://image.tmdb.org/t/p/w500${movie.poster_path}`;
+        }
         return (
           <Li key={movie.id}>
             <Link to={`/movies/${movie.id}`}>
               <ImgCard>
-                <Img
-                  srcSet={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
-                />
+                <Img srcSet={posterPath} />
               </ImgCard>
             </Link>
             <div>
