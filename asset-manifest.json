@@ -1,16 +1,18 @@
 {
   "files": {
     "main.css": "/goit-react-hw-05-movies/static/css/main.465b2ea3.css",
-    "main.js": "/goit-react-hw-05-movies/static/js/main.970937a5.js",
+    "main.js": "/goit-react-hw-05-movies/static/js/main.010a4105.js",
     "static/media/kinocat.jpeg": "/goit-react-hw-05-movies/static/media/kinocat.5c8040104c1e49dcb41f.jpeg",
+    "static/media/sad-cat.png": "/goit-react-hw-05-movies/static/media/sad-cat.0698916f75c95b1adc68.png",
     "static/media/logo.jpeg": "/goit-react-hw-05-movies/static/media/logo.e2ddc75905c4f429ca46.jpeg",
+    "static/media/unknown-cat.png": "/goit-react-hw-05-movies/static/media/unknown-cat.a48ae7ff79a6adea1463.png",
     "static/media/four-hundred-four.jpeg": "/goit-react-hw-05-movies/static/media/four-hundred-four.c18133024b23e9d89b2f.jpeg",
     "index.html": "/goit-react-hw-05-movies/index.html",
     "main.465b2ea3.css.map": "/goit-react-hw-05-movies/static/css/main.465b2ea3.css.map",
-    "main.970937a5.js.map": "/goit-react-hw-05-movies/static/js/main.970937a5.js.map"
+    "main.010a4105.js.map": "/goit-react-hw-05-movies/static/js/main.010a4105.js.map"
   },
   "entrypoints": [
     "static/css/main.465b2ea3.css",
-    "static/js/main.970937a5.js"
+    "static/js/main.010a4105.js"
   ]
 }
