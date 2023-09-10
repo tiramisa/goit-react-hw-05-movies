@@ -7,7 +7,8 @@ import MovieItem from 'components/MovieItem/MovieItem';
 import ButtonList from 'components/ButtonList/ButtonList';
 
 const Movies = () => {
-  const [searchQuery, setSearchQuery] = useState('');
+  // searchQuery,
+  const [setSearchQuery] = useState('');
   const [arrayOfMovies, setArrayOfMovies] = useState(null);
 
   const [searchParams, setSearchParams] = useSearchParams();
@@ -33,8 +34,8 @@ const Movies = () => {
     <div>
       <Title text="Movie search" />
       <Form onSubmit={onSubmitForm} />
-      {arrayOfMovies && <MovieItem arrayOfMovies={arrayOfMovies} />}
       <ButtonList />
+      {arrayOfMovies && <MovieItem arrayOfMovies={arrayOfMovies} />}
     </div>
   );
 };
