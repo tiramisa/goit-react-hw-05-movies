@@ -7,8 +7,7 @@ import MovieItem from 'components/MovieItem/MovieItem';
 import ButtonList from 'components/ButtonList/ButtonList';
 
 const Movies = () => {
-  // searchQuery,
-  const [setSearchQuery] = useState('');
+  const [searchQuery, setSearchQuery] = useState('');
   const [arrayOfMovies, setArrayOfMovies] = useState(null);
 
   const [searchParams, setSearchParams] = useSearchParams();
