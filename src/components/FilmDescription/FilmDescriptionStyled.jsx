@@ -9,8 +9,10 @@ export const GeneralContainer = styled.div`
   width: 900px;
   margin-bottom: 40px;
   img {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 10px;
     grid-area: 1 / 1 / 2 / 2;
-    width: 250px;
+    width: 290px;
     height: auto;
   }
 `;

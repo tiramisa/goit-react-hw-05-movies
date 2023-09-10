@@ -18,7 +18,7 @@ const FilmDescription = ({ movieInfo }) => {
     nameOfMovies = movieInfo.name;
   }
 
-  let userScore = movieInfo.vote_average * 10;
+  let userScore = parseInt(movieInfo.vote_average * 10);
   let genres = movieInfo.genres.map(genre => genre.name).join(', ');
 
   let posterPath = NoFotoImg;
