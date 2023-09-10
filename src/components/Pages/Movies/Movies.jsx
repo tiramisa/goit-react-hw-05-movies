@@ -34,6 +34,7 @@ const Movies = () => {
       <Title text="Movie search" />
       <Form onSubmit={onSubmitForm} />
       <ButtonList />
+      <p> {searchQuery}</p>
       {arrayOfMovies && <MovieItem arrayOfMovies={arrayOfMovies} />}
     </div>
   );
