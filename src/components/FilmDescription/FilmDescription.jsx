@@ -8,7 +8,7 @@ import {
   Score,
 } from './FilmDescriptionStyled';
 
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 
 const FilmDescription = ({ movieInfo }) => {
   let nameOfMovies = null;
@@ -49,6 +49,8 @@ const FilmDescription = ({ movieInfo }) => {
   );
 };
 
-// FilmDescription.propTypes = {};
+FilmDescription.propTypes = {
+  movieInfo: PropTypes.object.isRequired,
+};
 
 export default FilmDescription;

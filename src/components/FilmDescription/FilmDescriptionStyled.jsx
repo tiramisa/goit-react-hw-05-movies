@@ -3,10 +3,11 @@ import styled from 'styled-components';
 export const GeneralContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(2);
-  grid-template-rows: repeat(2, 1fr);
+  grid-template-rows: repeat(2);
   grid-column-gap: 24px;
   grid-row-gap: 24px;
   width: 900px;
+  margin-bottom: 40px;
   img {
     grid-area: 1 / 1 / 2 / 2;
     width: 250px;
@@ -43,24 +44,23 @@ export const DescriptionContainer = styled.div`
     padding-bottom: 0;
   }
 `;
-
-export const AdditionalInfoWrapper = styled.div`
-  grid-area: 2 / 1 / 3 / 2;
-
-  h2 {
-    color: #ffa733;
-  }
-  h2,
-  p {
-    font-family: 'Playfair Display', serif, 'Ubuntu Mono', monospace,
-      'Montserrat', sans-serif;
-  }
-`;
-
 export const Score = styled.div`
   color: #838383;
   padding-left: 8px;
   font-family: 'Playfair Display', serif, 'Ubuntu Mono', monospace, 'Montserrat',
     sans-serif;
   padding-bottom: 60px;
+`;
+
+export const AdditionalInfoWrapper = styled.div`
+  grid-area: 2 / 1 / 3 / 2;
+  h2 {
+    color: #ffa733;
+    padding-bottom: 10px;
+  }
+  h2,
+  p {
+    font-family: 'Playfair Display', serif, 'Ubuntu Mono', monospace,
+      'Montserrat', sans-serif;
+  }
 `;
