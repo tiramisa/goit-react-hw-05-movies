@@ -1,10 +1,16 @@
 import React from 'react';
 import NoFotoImg from '../../img/four-hundred-four.jpeg';
+
+import {
+  DescriptionContainer,
+  AdditionalInfoWrapper,
+  GeneralContainer,
+  Score,
+} from './FilmDescriptionStyled';
+
 // import PropTypes from 'prop-types';
 
 const FilmDescription = ({ movieInfo }) => {
-  console.log('movieInfo', movieInfo);
-
   let nameOfMovies = null;
   if (movieInfo.title) {
     nameOfMovies = movieInfo.title;
@@ -21,30 +27,25 @@ const FilmDescription = ({ movieInfo }) => {
   }
 
   return (
-    <div>
+    <GeneralContainer>
       <div>
         <p>Go back</p>
+        <img srcSet={posterPath} alt={`Poster for ${movieInfo.title}`} />
       </div>
-      <div>
-        <div>
-          <img srcSet={posterPath} alt={`Poster for ${movieInfo.title}`} />
-        </div>
-        <div>
-          <h1>{nameOfMovies}</h1>
-          <p>User Score:{userScore}</p>
-          <h2>Overview</h2>
-          <p>{movieInfo.overview}</p>
-          <h2>Genre</h2>
-          <p>{genres}</p>
-        </div>
-      </div>
-
-      <div>
+      <DescriptionContainer>
+        <h1>{nameOfMovies}</h1>
+        <Score>User Score:{userScore}%</Score>
+        <h2>Overview</h2>
+        <p>{movieInfo.overview}</p>
+        <h2>Genre</h2>
+        <p>{genres}</p>
+      </DescriptionContainer>
+      <AdditionalInfoWrapper>
         <h2>Additional Information</h2>
         <p>Casts</p>
         <p>Reviews</p>
-      </div>
-    </div>
+      </AdditionalInfoWrapper>
+    </GeneralContainer>
   );
 };
 
