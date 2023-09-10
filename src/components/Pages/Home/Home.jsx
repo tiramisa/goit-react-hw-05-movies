@@ -24,7 +24,7 @@ const Home = () => {
           <img src={NoResultsFound} alt="No results found" />
         </div>
       )}
-      {arrayOfMovies && <Title text="Top films:" />}
+      {arrayOfMovies && <Title text="Top films" />}
       {arrayOfMovies && <MovieItem arrayOfMovies={arrayOfMovies} />}
     </>
   );

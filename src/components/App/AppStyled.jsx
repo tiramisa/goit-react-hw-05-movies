@@ -10,12 +10,9 @@ export const Container = styled.div`
   color: #aba8a9;
   padding-left: 15px;
   padding-right: 15px;
-  padding-bottom: 40px;
-  padding-top: 30px;
 
   a {
     color: #ffa733; /*золото*/
-    margin-top: 20px;
     text-decoration: none;
     transition: color 0.2s ease-in-out;
   }
@@ -25,6 +22,19 @@ export const Container = styled.div`
   }
 
   h1 {
-    font-size: 24px;
+    cursor: default;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    font-size: 48px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 100;
+    padding: 14px;
+    color: #ffa733;
+    transition: color 0.2s ease-in-out;
+  }
+  h1:hover {
+    transform: scale(1.01);
+    color: #d55b0f;
   }
 `;

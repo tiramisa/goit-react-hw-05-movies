@@ -31,7 +31,7 @@ export const StyledLink = styled(NavLink)`
   font-size: 18px;
 
   &.active {
-    color: #d55b0f;
+    color: #ffee04;
     font-weight: 500;
   }
 `;

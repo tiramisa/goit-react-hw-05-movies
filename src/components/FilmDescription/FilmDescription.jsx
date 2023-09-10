@@ -1,17 +1,18 @@
-import React from 'react';
-import NoFotoImg from '../../img/four-hundred-four.jpeg';
-
 import {
   DescriptionContainer,
   AdditionalInfoWrapper,
   GeneralContainer,
   Score,
 } from './FilmDescriptionStyled';
-
+import React from 'react';
 import PropTypes from 'prop-types';
+import { NavLink } from 'react-router-dom';
+import { Outlet } from 'react-router-dom';
+import NoFotoImg from '../../img/four-hundred-four.jpeg';
 
 const FilmDescription = ({ movieInfo }) => {
   let nameOfMovies = null;
+
   if (movieInfo.title) {
     nameOfMovies = movieInfo.title;
   } else {
@@ -42,9 +43,10 @@ const FilmDescription = ({ movieInfo }) => {
       </DescriptionContainer>
       <AdditionalInfoWrapper>
         <h2>Additional Information</h2>
-        <p>Casts</p>
-        <p>Reviews</p>
+        <NavLink to={`/movies/${movieInfo.id}/cast`}>Casts</NavLink>
+        <NavLink to={`/movies/${movieInfo.id}/reviews`}>Reviews</NavLink>
       </AdditionalInfoWrapper>
+      <Outlet />
     </GeneralContainer>
   );
 };
