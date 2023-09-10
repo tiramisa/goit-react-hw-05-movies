@@ -32,5 +32,6 @@ export const StyledLink = styled(NavLink)`
 
   &.active {
     color: #d55b0f;
+    font-weight: 500;
   }
 `;
