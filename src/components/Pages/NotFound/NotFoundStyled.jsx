@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-
+import CatEat from 'img/cat-eat.png';
 export const ErrorNotFound = styled.div`
   img {
     display: flex;
@@ -27,4 +27,16 @@ export const LinkFound = styled.div`
     animation-duration: 4.5s;
     animation-iteration-count: infinite;
   }
+`;
+
+export const CatImage = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+  height: 300px;
+  background-image: url(${CatEat});
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0 auto;
 `;

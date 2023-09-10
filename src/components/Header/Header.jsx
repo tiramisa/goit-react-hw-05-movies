@@ -1,6 +1,6 @@
 import { NavLink } from 'react-router-dom';
 import { Container } from '../App/AppStyled';
-import { HeaderContainer, HeaderNav, HeaderLogo } from './HeaderStyled';
+import { HeaderContainer, HeaderLogo, StyledLink } from './HeaderStyled';
 
 import logo from 'img/logo.jpeg';
 
@@ -15,12 +15,8 @@ const Header = () => {
             </div>
           </NavLink>
           <nav>
-            <NavLink to="/">
-              <HeaderNav>Home</HeaderNav>
-            </NavLink>
-            <NavLink to="/movies">
-              <HeaderNav>Movies</HeaderNav>
-            </NavLink>
+            <StyledLink to="/movies">Movies</StyledLink>
+            <StyledLink to="/">Home</StyledLink>
           </nav>
         </HeaderContainer>
       </Container>

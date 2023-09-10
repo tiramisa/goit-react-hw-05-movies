@@ -10,15 +10,18 @@ export const Container = styled.div`
   color: #aba8a9;
   padding-left: 15px;
   padding-right: 15px;
+  padding-bottom: 40px;
+  padding-top: 30px;
 
   a {
-    margin-top: 20px;
     color: #ffa733; /*золото*/
+    margin-top: 20px;
     text-decoration: none;
     transition: color 0.2s ease-in-out;
   }
   a:hover {
-    color: #f1eeef;
+    transform: scale(1.01);
+    color: #d55b0f;
   }
 
   h1 {

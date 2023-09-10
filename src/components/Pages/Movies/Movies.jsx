@@ -5,6 +5,8 @@ import Title from 'components/Title/Title';
 import Form from 'components/Form/Form';
 import MovieItem from 'components/MovieItem/MovieItem';
 import ButtonList from 'components/ButtonList/ButtonList';
+import { CatImage } from '../NotFound/NotFoundStyled';
+import CatEat from 'img/cat-eat.png';
 
 const Movies = () => {
   const [searchQuery, setSearchQuery] = useState('');
@@ -33,9 +35,13 @@ const Movies = () => {
     <div>
       <Title text="Movie search" />
       <Form onSubmit={onSubmitForm} />
-      <ButtonList />
       <p> {searchQuery}</p>
-      {arrayOfMovies && <MovieItem arrayOfMovies={arrayOfMovies} />}
+      <ButtonList />
+      {arrayOfMovies ? (
+        <MovieItem arrayOfMovies={arrayOfMovies} />
+      ) : (
+        <CatImage src={CatEat} alt="cat" />
+      )}
     </div>
   );
 };
