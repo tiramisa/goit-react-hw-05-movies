@@ -7,26 +7,32 @@ import MovieItem from 'components/MovieItem/MovieItem';
 import ButtonList from 'components/ButtonList/ButtonList';
 import { CatImage } from '../NotFound/NotFoundStyled';
 import CatEat from 'img/cat-eat.png';
+import Loader from 'components/Loader/Loader';
 
 const Movies = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [arrayOfMovies, setArrayOfMovies] = useState(null);
-
+  const [loading, setLoading] = useState(false);
   const [searchParams, setSearchParams] = useSearchParams();
   const query = searchParams.get('query');
 
   const onSubmitForm = res => {
     setSearchParams({ query: res });
     setSearchQuery(res);
+    setLoading(true);
+
     getMoviesName(res).then(data => {
       setArrayOfMovies(data.results);
+      setLoading(false);
     });
   };
 
   useEffect(() => {
     if (query) {
+      setLoading(true);
       getMoviesName(query).then(data => {
         setArrayOfMovies(data.results);
+        setLoading(false);
       });
     }
   }, [query]);
@@ -35,9 +41,11 @@ const Movies = () => {
     <div>
       <Title text="Movie search" />
       <Form onSubmit={onSubmitForm} />
-      <p> {searchQuery}</p>
+      <p style={{ display: 'none' }}>{searchQuery}</p>
       <ButtonList />
-      {arrayOfMovies ? (
+      {loading ? (
+        <Loader />
+      ) : arrayOfMovies ? (
         <MovieItem arrayOfMovies={arrayOfMovies} />
       ) : (
         <CatImage src={CatEat} alt="cat" />
