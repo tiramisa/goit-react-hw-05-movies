@@ -1,9 +1,12 @@
 import { NavLink, Link } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import { Ul, Li, ImgCard, Img } from './MovieItemStyled';
 import NoFotoImg from '../../img/four-hundred-four.jpeg';
 import PropTypes from 'prop-types';
 
 const MovieItem = ({ arrayOfMovies }) => {
+  const location = useLocation();
+
   return (
     <Ul>
       {arrayOfMovies.map(movie => {
@@ -19,11 +22,12 @@ const MovieItem = ({ arrayOfMovies }) => {
         }
         return (
           <Li key={movie.id}>
-            <Link to={`/movies/${movie.id}`}>
+            <Link to={`/movies/${movie.id}`} state={{ from: location }}>
               <ImgCard>
                 <Img srcSet={posterPath} />
               </ImgCard>
             </Link>
+
             <div>
               <NavLink to={`/movies/${movie.id}`}>{nameOfMovies}</NavLink>
             </div>
