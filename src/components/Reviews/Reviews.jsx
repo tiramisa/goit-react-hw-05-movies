@@ -22,7 +22,7 @@ const Reviews = () => {
 
   return (
     <div>
-      {loading && <Loader />}
+      {loading && reviews.length === 0 && <Loader />}
 
       {reviews.length === 0 ? (
         <p>No reviews available</p>
