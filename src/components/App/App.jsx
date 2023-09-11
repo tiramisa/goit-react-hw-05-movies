@@ -1,14 +1,16 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
-import Home from 'components/Pages/Home/Home';
-import Movies from 'components/Pages/Movies/Movies';
-import MovieDetails from 'components/Pages/MovieDetails/MovieDetails';
-import NotFound from 'components/Pages/NotFound/NotFound';
-import SharedLayout from 'components/SharedLayout/SharedLayout';
-import Cast from 'components/Cast/Cast';
-import Reviews from 'components/Reviews/Reviews';
-
+import { lazy } from 'react';
 import background from 'img/kinocat.jpeg';
+const Home = lazy(() => import('components/Pages/Home/Home'));
+const Movies = lazy(() => import('components/Pages/Movies/Movies'));
+const MovieDetails = lazy(() =>
+  import('components/Pages/MovieDetails/MovieDetails')
+);
+const NotFound = lazy(() => import('components/Pages/NotFound/NotFound'));
+const SharedLayout = lazy(() => import('components/SharedLayout/SharedLayout'));
+const Cast = lazy(() => import('components/Cast/Cast'));
+const Reviews = lazy(() => import('components/Reviews/Reviews'));
 
 export const App = () => {
   return (
