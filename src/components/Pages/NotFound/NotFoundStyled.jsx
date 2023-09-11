@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import CatEat from 'img/cat-eat.png';
+
 export const ErrorNotFound = styled.div`
   img {
     display: flex;
