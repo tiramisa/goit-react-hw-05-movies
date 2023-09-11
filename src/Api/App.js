@@ -22,9 +22,15 @@ export function getMoviesName(query) {
   const URL = `${baseURL}search/movie?query=${query}&include_adult=false&language=en-US&page=1`;
   return fetch(URL, options).then(response => response.json());
 }
-// актеры
+// Cast
 
 export function getMoviesCast(movie_id) {
   const URL = `${baseURL}movie/${movie_id}/credits`;
+  return fetch(URL, options).then(response => response.json());
+}
+// Reviews
+
+export function getMoviesReviews(movie_id) {
+  const URL = `${baseURL}movie/${movie_id}/reviews`;
   return fetch(URL, options).then(response => response.json());
 }
