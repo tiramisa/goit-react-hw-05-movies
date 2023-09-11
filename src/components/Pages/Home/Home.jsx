@@ -1,9 +1,8 @@
-import { RotatingLines } from 'react-loader-spinner';
 import { getPopularMoviesFromApi } from '../../../Api/App';
 import { useState, useEffect } from 'react';
 import MovieItem from '../../MovieItem/MovieItem';
 import Title from 'components/Title/Title';
-import { Spinner } from './Spinner';
+import Loader from 'components/Loader/Loader';
 
 const Home = () => {
   const [arrayOfMovies, setArrayOfMovies] = useState(null);
@@ -27,27 +26,16 @@ const Home = () => {
 
   return (
     <>
-      {loading ? (
-        <Spinner>
-          <RotatingLines
-            strokeColor="grey"
-            strokeWidth="5"
-            animationDuration="0.75"
-            width="96"
-            visible={true}
-          />
-        </Spinner>
-      ) : (
-        <div>
-          {!arrayOfMovies && (
-            <div>
-              <p>No results found</p>
-            </div>
-          )}
-          {arrayOfMovies && <Title text="Top films" />}
-          {arrayOfMovies && <MovieItem arrayOfMovies={arrayOfMovies} />}
-        </div>
-      )}
+      <div>
+        {!arrayOfMovies && (
+          <div>
+            <p>No results found</p>
+          </div>
+        )}
+        {loading && <Loader />}
+        {arrayOfMovies && <Title text="Top films" />}
+        {arrayOfMovies && <MovieItem arrayOfMovies={arrayOfMovies} />}
+      </div>
     </>
   );
 };
