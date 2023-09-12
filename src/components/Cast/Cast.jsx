@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import { getMoviesCast } from 'Api/App';
 import ActorFoto from 'img/actorFoto.jpeg';
 import Loader from 'components/Loader/Loader';
+import { CardContainer } from './CastStyled';
 
 const Cast = () => {
   const { movieId } = useParams();
@@ -28,7 +29,7 @@ const Cast = () => {
       {cast.length === 0 && <p>No cast available</p>}
 
       {cast && (
-        <div>
+        <CardContainer>
           <ul>
             {cast.map(actor => (
               <li key={actor.id}>
@@ -48,7 +49,7 @@ const Cast = () => {
               </li>
             ))}
           </ul>
-        </div>
+        </CardContainer>
       )}
     </div>
   );

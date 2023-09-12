@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { getMoviesReviews } from 'Api/App';
 import Loader from 'components/Loader/Loader';
+import { CardReviews } from './Reviews/ReviewsStyled';
 
 const Reviews = () => {
   const { movieId } = useParams();
@@ -27,7 +28,7 @@ const Reviews = () => {
       {reviews.length === 0 ? (
         <p>No reviews available</p>
       ) : (
-        <div>
+        <CardReviews>
           <h2>Reviews</h2>
           <ul>
             {reviews.map(review => (
@@ -37,7 +38,7 @@ const Reviews = () => {
               </li>
             ))}
           </ul>
-        </div>
+        </CardReviews>
       )}
     </div>
   );

@@ -2,13 +2,14 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { NavLink } from 'react-router-dom';
 import { Outlet, useLocation } from 'react-router-dom';
-
 import NoFotoImg from 'img/four-hundred-four.jpeg';
 import {
   DescriptionContainer,
   AdditionalInfoWrapper,
   GeneralContainer,
   Score,
+  GoBack,
+  StyledLink,
 } from './FilmDescriptionStyled';
 
 const FilmDescription = ({ movieInfo }) => {
@@ -27,7 +28,9 @@ const FilmDescription = ({ movieInfo }) => {
   return (
     <GeneralContainer>
       <div>
-        <NavLink to={backLinkHref}>Go back</NavLink>
+        <GoBack>
+          <NavLink to={backLinkHref}>Go back</NavLink>
+        </GoBack>
         <img srcSet={posterPath} alt={`Poster for ${nameOfMovies}`} />
       </div>
       {movieInfo && (
@@ -42,12 +45,16 @@ const FilmDescription = ({ movieInfo }) => {
       )}
       <AdditionalInfoWrapper>
         <h2>Additional Information</h2>
-        <NavLink to={`/movies/${movieInfo.id}/cast`} state={location.state}>
+
+        <StyledLink to={`/movies/${movieInfo.id}/cast`} state={location.state}>
           Casts
-        </NavLink>
-        <NavLink to={`/movies/${movieInfo.id}/reviews`} state={location.state}>
+        </StyledLink>
+        <StyledLink
+          to={`/movies/${movieInfo.id}/reviews`}
+          state={location.state}
+        >
           Reviews
-        </NavLink>
+        </StyledLink>
       </AdditionalInfoWrapper>
       <Outlet />
     </GeneralContainer>
