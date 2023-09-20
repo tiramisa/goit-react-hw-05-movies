@@ -8,6 +8,7 @@ import ButtonList from 'components/ButtonList/ButtonList';
 import { CatImage } from '../NotFound/NotFoundStyled';
 import CatEat from 'img/cat-eat.png';
 import Loader from 'components/Loader/Loader';
+import { Card } from '../../MovieItem/MovieItemStyled';
 
 const Movies = () => {
   const [searchQuery, setSearchQuery] = useState('');
@@ -38,7 +39,7 @@ const Movies = () => {
   }, [query]);
 
   return (
-    <div>
+    <Card>
       <Title text="Movie search" />
       <Form onSubmit={onSubmitForm} />
       <p style={{ display: 'none' }}>{searchQuery}</p>
@@ -50,7 +51,7 @@ const Movies = () => {
       ) : (
         <CatImage src={CatEat} alt="cat" />
       )}
-    </div>
+    </Card>
   );
 };
 export default Movies;

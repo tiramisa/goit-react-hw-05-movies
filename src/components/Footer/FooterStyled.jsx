@@ -50,15 +50,15 @@ export const FooterContent = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: center;
   width: 80%;
   margin: auto;
   padding: 20px;
   gap: 24px;
 `;
 export const FooterText = styled.p`
+  width: 600px;
   font-size: 16px;
   font-family: 'Playfair Display', serif, 'Ubuntu Mono', monospace, 'Montserrat',
     sans-serif;
-  font-weight: 400;
+  font-weight: 300;
 `;

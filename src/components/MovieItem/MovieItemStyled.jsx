@@ -26,3 +26,7 @@ export const ImgCard = styled.div`
   height: 339px;
   width: 226px;
 `;
+export const Card = styled.div`
+  padding-top: 100px;
+  padding-bottom: 100px;
+`;

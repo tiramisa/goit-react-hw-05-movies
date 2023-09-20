@@ -44,7 +44,6 @@ const Footer = () => {
             film industry. We provide you with up-to-date information about new
             films, reviews, interesting facts, and much more.
           </FooterText>
-
           <FooterText>
             Follow us on Instagram, Facebook, and Twitter to keep up to date
             with the latest updates and share your impressions about movies!

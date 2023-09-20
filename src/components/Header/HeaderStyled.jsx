@@ -8,15 +8,14 @@ export const HeaderContainer = styled.div`
   padding: 10px 0;
 `;
 
-export const HeaderLogo = styled.h1`
+export const HeaderLogo = styled.div`
   background-image: url(${props => props.image});
   background-size: cover;
+  cursor: pointer;
   background-repeat: no-repeat;
   width: 180px;
   height: 100px;
 `;
-
-export const HeaderNav = styled.nav``;
 
 export const StyledLink = styled(NavLink)`
   margin-top: 20px;
